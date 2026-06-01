@@ -1,0 +1,25 @@
+.hakkimda {
+  padding: 5rem 3rem;
+  background-color: #1a1a2e;
+  text-align: center;
+}
+
+.hakkimda h2 {
+  font-size: 2.5rem;
+  color: #ff6b6b;
+  margin-bottom: 3rem;
+}
+
+.hakkimda-text {
+  max-width: 700px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.hakkimda-text p {
+  font-size: 1.1rem;
+  color: #cccccc;
+  line-height: 1.8;
+}
