@@ -1,29 +1,117 @@
-.about {
-  padding: 5rem 3rem;
-  background-color: #1a1a2e;
-  text-align: center;
+.about-container {
+  width: 100%;
+  max-width: 1000px;
+  margin-top: 1rem;
 }
 
-.about h2 {
-  font-size: 2.5rem;
-  color: #ff6b6b;
-  margin-bottom: 3rem;
-}
-
-.about-content {
+.about-glass-card {
+  padding: 3rem;
   display: flex;
+  gap: 3.5rem;
+  align-items: stretch;
+}
+
+.about-intro {
+  flex: 1.2;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
 }
 
-.about-text {
-  max-width: 700px;
+.about-intro h3 {
+  font-size: 1.6rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: var(--text-dark);
+  margin-bottom: 1.2rem;
+  line-height: 1.4;
+}
+
+.about-intro p {
+  font-size: 0.98rem;
+  color: var(--text-muted);
+  margin-bottom: 1.2rem;
+  line-height: 1.7;
+}
+
+.about-intro p:last-child {
+  margin-bottom: 0;
+}
+
+.about-traits {
+  flex: 0.8;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  justify-content: center;
 }
 
-.about-text p {
-  font-size: 1.1rem;
-  color: #cccccc;
-  line-height: 1.8;
+.trait-item {
+  display: flex;
+  gap: 1.2rem;
+  align-items: flex-start;
+  padding: 1rem;
+  border-radius: var(--radius-md);
+  transition: var(--transition-smooth);
+}
+
+.trait-item:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.trait-icon {
+  background: linear-gradient(135deg, var(--accent-pink) 0%, var(--accent-peach) 100%);
+  color: var(--text-dark);
+  font-size: 1.2rem;
+  min-width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(255, 214, 186, 0.4);
+}
+
+.trait-item h4 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: 0.3rem;
+}
+
+.trait-item p {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+/* Responsive configurations */
+@media (max-width: 992px) {
+  .about-glass-card {
+    flex-direction: column;
+    gap: 2.5rem;
+    padding: 2rem;
+  }
+  
+  .about-intro, .about-traits {
+    width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .about-glass-card {
+    padding: 1.5rem;
+  }
+  
+  .about-intro h3 {
+    font-size: 1.3rem;
+  }
+  
+  .trait-item {
+    padding: 0.5rem 0;
+  }
+  
+  .trait-item:hover {
+    background: transparent;
+  }
 }

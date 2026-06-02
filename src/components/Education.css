@@ -1,70 +1,100 @@
 .education {
-  padding: 5rem 3rem;
-  background-color: #0f0f1a;
-  text-align: center;
-}
-
-.education h2 {
-  font-size: 2.5rem;
-  color: #ff6b6b;
-  margin-bottom: 3rem;
+  width: 100%;
 }
 
 .education-list {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  max-width: 700px;
-  margin: 0 auto;
+  width: 100%;
+  max-width: 800px;
+  margin-top: 1rem;
 }
 
 .education-card {
   display: flex;
+  gap: 2rem;
+  padding: 2.5rem;
   align-items: flex-start;
-  gap: 1.5rem;
-  background: #1a1a2e;
-  border: 1px solid #2a2a4a;
-  border-radius: 12px;
-  padding: 1.5rem;
-  text-align: left;
-  transition: transform 0.2s, border-color 0.2s;
 }
 
-.education-card:hover {
-  transform: translateY(-4px);
-  border-color: #ff6b6b;
+.education-icon-wrapper {
+  background: linear-gradient(135deg, var(--accent-pink) 0%, var(--accent-peach) 100%);
+  color: var(--text-dark);
+  font-size: 1.8rem;
+  min-width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  box-shadow: 0 6px 15px rgba(255, 214, 186, 0.5);
+  border: 1px solid var(--glass-border);
 }
 
 .education-icon {
-  font-size: 2rem;
-  color: #ff6b6b;
-  margin-top: 4px;
-  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.education-info h3 {
-  color: #ffffff;
-  font-size: 1.1rem;
-  margin-bottom: 0.3rem;
-}
-
-.education-info h4 {
-  color: #ff6b6b;
-  font-size: 0.95rem;
-  font-weight: 500;
-  margin-bottom: 0.3rem;
+.education-info {
+  display: flex;
+  flex-direction: column;
 }
 
 .education-year {
+  align-self: flex-start;
+  background: rgba(255, 220, 220, 0.4);
+  border: 1px solid rgba(255, 214, 186, 0.5);
+  color: var(--text-dark);
   font-size: 0.8rem;
-  color: #888;
-  display: block;
-  margin-bottom: 0.5rem;
+  font-weight: 600;
+  padding: 0.3rem 1rem;
+  border-radius: 30px;
+  margin-bottom: 0.8rem;
+}
+
+.education-info h3 {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--text-dark);
+  margin-bottom: 0.3rem;
+  letter-spacing: -0.03em;
+}
+
+.education-info h4 {
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  margin-bottom: 1rem;
 }
 
 .education-info p {
-  color: #cccccc;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
+  color: var(--text-muted);
   line-height: 1.6;
-  margin: 0;
+}
+
+@media (max-width: 576px) {
+  .education-card {
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1.8rem;
+  }
+  
+  .education-icon-wrapper {
+    min-width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+  }
+  
+  .education-info h3 {
+    font-size: 1.15rem;
+  }
+  
+  .education-info h4 {
+    font-size: 0.95rem;
+  }
+  
+  .education-info p {
+    font-size: 0.88rem;
+  }
 }

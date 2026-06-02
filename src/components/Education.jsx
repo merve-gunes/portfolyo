@@ -6,25 +6,27 @@ const educations = [
     id: 1,
     school: 'OSTİM TEKNİK ÜNİVERSİTESİ',
     department: 'Yazılım Mühendisliği',
-    year: '2024 <— Devam ediyor',
-    description: '2. sınıf öğrencisiyim. Web geliştirme ve yazılım mühendisliği üzerine eğitim alıyorum.',
+    year: '2024 — Devam Ediyor',
+    description: 'Yazılım mühendisliğinin temelleri, algoritma analizi, nesne yönelimli programlama, veritabanı yönetimi ve web teknolojileri üzerine akademik eğitim alıyorum. Teorik bilgiyi pratik projelerle pekiştiriyorum.',
   },
 ];
 
 function Education() {
   return (
     <section className="education" id="egitim">
-      <h2>Eğitim</h2>
-      <div className="education-list">
+      <h2 className="reveal">Eğitim</h2>
+      <div className="education-list reveal reveal-delay-1">
         {educations.map((edu) => (
-          <div className="education-card" key={edu.id}>
-            <div className="education-icon">
-              <FaGraduationCap />
+          <div className="education-card glass-panel" key={edu.id}>
+            <div className="education-icon-wrapper">
+              <span className="education-icon">
+                <FaGraduationCap />
+              </span>
             </div>
             <div className="education-info">
+              <span className="education-year">{edu.year}</span>
               <h3>{edu.school}</h3>
               <h4>{edu.department}</h4>
-              <span className="education-year">{edu.year}</span>
               <p>{edu.description}</p>
             </div>
           </div>
