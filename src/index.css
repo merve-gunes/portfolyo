@@ -1,28 +1,30 @@
 :root {
-  /* Colors */
-  --bg-start: #FFF2EB;
-  --bg-end: #FFE8CD;
-  --accent-pink: #FFDCDC;
-  --accent-peach: #FFD6BA;
-  --text-dark: #2d3142;
-  --text-muted: #5e6472;
+  /* Vibrant Holographic Pastel Color Palette */
+  --pastel-pink: #FFC6FF;
+  --pastel-blue: #A0C4FF;
+  
+  --bg-start: #FAF9FC;
+  --bg-end: #F0F3FA;
+  
+  --text-dark: #2a2d34;
+  --text-muted: #5c606a;
   
   /* Glassmorphism */
   --glass-bg: rgba(255, 255, 255, 0.45);
   --glass-border: rgba(255, 255, 255, 0.6);
   --glass-blur: blur(16px);
   
-  /* Shadows (Pastel drop-shadows instead of harsh black) */
-  --shadow-soft: 0 16px 32px rgba(255, 214, 186, 0.6), 0 4px 12px rgba(255, 220, 220, 0.4);
-  --shadow-hover: 0 24px 48px rgba(255, 214, 186, 0.8), 0 8px 20px rgba(255, 220, 220, 0.6);
+  /* Shadows (Vibrant Pastel drop-shadows) */
+  --shadow-soft: 0 16px 32px rgba(160, 196, 255, 0.25), 0 4px 12px rgba(255, 198, 255, 0.2);
+  --shadow-hover: 0 24px 48px rgba(160, 196, 255, 0.45), 0 8px 24px rgba(255, 198, 255, 0.35);
   
   /* Borders and Radius */
   --radius-lg: 24px;
   --radius-md: 16px;
   --radius-sm: 8px;
   
-  /* Transitions */
-  --transition-smooth: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  /* Ultra-modern Bouncy Transitions */
+  --transition-smooth: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 * {
@@ -52,12 +54,13 @@ h1, h2, h3 {
   color: var(--text-dark);
 }
 
-/* Glassmorphism Card Style Utility */
+/* Glassmorphism Card Style Utility with Gradient Border */
 .glass-panel {
-  background: var(--glass-bg);
+  background: linear-gradient(rgba(255, 255, 255, 0.45), rgba(255, 255, 255, 0.45)) padding-box,
+              linear-gradient(135deg, var(--pastel-pink), var(--pastel-blue)) border-box;
+  border: 1px solid transparent;
   backdrop-filter: var(--glass-blur);
   -webkit-backdrop-filter: var(--glass-blur);
-  border: 1px solid var(--glass-border);
   box-shadow: var(--shadow-soft);
   border-radius: var(--radius-lg);
   transition: var(--transition-smooth);
@@ -70,13 +73,13 @@ h1, h2, h3 {
 
 /* Interactive Element Styles */
 .btn-accent {
-  background: linear-gradient(135deg, var(--accent-pink) 0%, var(--accent-peach) 100%);
-  border: 1px solid var(--glass-border);
+  background: var(--pastel-blue);
   color: var(--text-dark);
-  font-weight: 500;
+  border: 1px solid transparent;
+  font-weight: 600;
   cursor: pointer;
   transition: var(--transition-smooth);
-  box-shadow: 0 8px 16px rgba(255, 214, 186, 0.5);
+  box-shadow: 0 8px 20px rgba(160, 196, 255, 0.4);
   display: inline-flex;
   align-items: center;
   gap: 8px;
@@ -85,8 +88,8 @@ h1, h2, h3 {
 
 .btn-accent:hover {
   transform: translateY(-3px);
-  box-shadow: 0 12px 24px rgba(255, 214, 186, 0.7);
-  filter: brightness(1.02);
+  background: var(--pastel-pink);
+  box-shadow: 0 12px 24px rgba(255, 198, 255, 0.7);
 }
 
 .btn-accent:active {
@@ -95,7 +98,7 @@ h1, h2, h3 {
 
 /* Section styling */
 section {
-  padding: 5rem 10% 4rem 10%;
+  padding: 6rem 10% 5rem 10%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -108,7 +111,7 @@ section h2 {
   font-weight: 800;
   letter-spacing: -0.03em;
   color: var(--text-dark);
-  margin-bottom: 3rem;
+  margin-bottom: 3.5rem;
   position: relative;
   text-align: center;
 }
@@ -119,14 +122,14 @@ section h2::after {
   bottom: -10px;
   left: 50%;
   transform: translateX(-50%);
-  width: 50px;
+  width: 60px;
   height: 4px;
   border-radius: 2px;
-  background: linear-gradient(90deg, var(--accent-pink), var(--accent-peach));
+  background: linear-gradient(90deg, var(--pastel-pink), var(--pastel-blue));
 }
 
 @media (max-width: 768px) {
   section {
-    padding: 4rem 5% 3rem 5%;
+    padding: 5rem 5% 4rem 5%;
   }
 }

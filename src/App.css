@@ -26,61 +26,6 @@
   position: relative;
 }
 
-/* Subtle background decorative pastel blobs to make the glassmorphism pop */
-.blob {
-  position: absolute;
-  border-radius: 50%;
-  filter: blur(120px);
-  z-index: 1;
-  pointer-events: none;
-  opacity: 0.6;
-}
-
-.blob-1 {
-  top: 15%;
-  left: 10%;
-  width: 300px;
-  height: 300px;
-  background-color: var(--accent-pink);
-  animation: float-blob-1 12s infinite alternate ease-in-out;
-}
-
-.blob-2 {
-  top: 45%;
-  right: 10%;
-  width: 400px;
-  height: 400px;
-  background-color: var(--accent-peach);
-  animation: float-blob-2 15s infinite alternate ease-in-out;
-}
-
-.blob-3 {
-  bottom: 15%;
-  left: 15%;
-  width: 350px;
-  height: 350px;
-  background-color: var(--accent-pink);
-  animation: float-blob-1 10s infinite alternate-reverse ease-in-out;
-}
-
-@keyframes float-blob-1 {
-  0% {
-    transform: translate(0, 0) scale(1);
-  }
-  100% {
-    transform: translate(50px, 40px) scale(1.1);
-  }
-}
-
-@keyframes float-blob-2 {
-  0% {
-    transform: translate(0, 0) scale(1.1);
-  }
-  100% {
-    transform: translate(-60px, 50px) scale(0.9);
-  }
-}
-
 /* Footer layout */
 .footer {
   text-align: center;

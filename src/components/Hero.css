@@ -47,7 +47,7 @@
 }
 
 .gradient-text {
-  background: linear-gradient(135deg, #e07a5f 0%, #d4a373 100%);
+  background: linear-gradient(135deg, #ff8da1 0%, #7da2ff 100%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -75,8 +75,9 @@
 }
 
 .btn-secondary {
-  background: var(--glass-bg);
-  border: 1px solid var(--glass-border);
+  background: linear-gradient(rgba(255, 255, 255, 0.45), rgba(255, 255, 255, 0.45)) padding-box,
+              linear-gradient(135deg, var(--pastel-pink), var(--pastel-blue)) border-box;
+  border: 1px solid transparent;
   color: var(--text-dark);
   cursor: pointer;
   transition: var(--transition-smooth);
@@ -90,7 +91,8 @@
 .btn-secondary:hover {
   transform: translateY(-3px);
   box-shadow: var(--shadow-hover);
-  background: rgba(255, 255, 255, 0.6);
+  background: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)) padding-box,
+              linear-gradient(135deg, var(--pastel-blue), var(--pastel-pink)) border-box;
 }
 
 .btn-secondary:active {
@@ -130,9 +132,9 @@
   transform: translate(-50%, -50%);
   width: 110%;
   height: 110%;
-  background: linear-gradient(135deg, var(--accent-pink) 0%, var(--accent-peach) 100%);
+  background: linear-gradient(135deg, var(--pastel-pink) 0%, var(--pastel-blue) 100%);
   filter: blur(40px);
-  opacity: 0.4;
+  opacity: 0.45;
   z-index: 1;
   border-radius: 50%;
 }

@@ -46,16 +46,6 @@ function Projects() {
           <div className={`project-card glass-panel reveal ${project.delayClass}`} key={project.id}>
             <div className="project-image-container">
               <img src={project.image} alt={project.title} className="project-image" />
-              <div className="project-overlay">
-                <div className="project-action-links">
-                  <a href={project.github} target="_blank" rel="noreferrer" title="GitHub Deposu">
-                    <FaGithub />
-                  </a>
-                  <a href={project.demo} target="_blank" rel="noreferrer" title="Canlı Önizleme">
-                    <FaExternalLinkAlt />
-                  </a>
-                </div>
-              </div>
             </div>
             <div className="project-info">
               <h3>{project.title}</h3>
@@ -66,6 +56,14 @@ function Projects() {
                     {tag}
                   </span>
                 ))}
+              </div>
+              <div className="project-links">
+                <a href={project.github} target="_blank" rel="noreferrer">
+                  <FaGithub /> GitHub
+                </a>
+                <a href={project.demo} target="_blank" rel="noreferrer">
+                  <FaExternalLinkAlt /> Demo
+                </a>
               </div>
             </div>
           </div>

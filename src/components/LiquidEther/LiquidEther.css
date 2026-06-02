@@ -1,0 +1,10 @@
+.liquid-ether-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -2; /* Positioned behind all components and background blobs */
+  pointer-events: none;
+  background-color: var(--bg-start);
+}

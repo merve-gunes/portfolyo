@@ -4,8 +4,10 @@ import Hero from './components/Hero';
 import About from './components/About';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
+import Etkinlikler from './components/Etkinlikler';
 import Education from './components/Education';
 import Contact from './components/Contact';
+import LiquidEther from './components/LiquidEther/LiquidEther';
 import './App.css';
 
 function App() {
@@ -35,10 +37,7 @@ function App() {
 
   return (
     <div className="app-container">
-      {/* Soft pastel ambient background blobs */}
-      <div className="blob blob-1"></div>
-      <div className="blob blob-2"></div>
-      <div className="blob blob-3"></div>
+      <LiquidEther colors={['#FFDCDC', '#BDE0FE', '#FFC6FF', '#A0C4FF']} />
 
       <Navbar />
       <main>
@@ -46,6 +45,7 @@ function App() {
         <About />
         <Skills />
         <Projects />
+        <Etkinlikler />
         <Education />
         <Contact />
       </main>

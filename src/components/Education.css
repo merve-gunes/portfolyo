@@ -16,7 +16,7 @@
 }
 
 .education-icon-wrapper {
-  background: linear-gradient(135deg, var(--accent-pink) 0%, var(--accent-peach) 100%);
+  background: linear-gradient(135deg, var(--pastel-pink) 0%, var(--pastel-blue) 100%);
   color: var(--text-dark);
   font-size: 1.8rem;
   min-width: 60px;
@@ -25,7 +25,7 @@
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  box-shadow: 0 6px 15px rgba(255, 214, 186, 0.5);
+  box-shadow: 0 6px 16px rgba(160, 196, 255, 0.35);
   border: 1px solid var(--glass-border);
 }
 
@@ -42,8 +42,8 @@
 
 .education-year {
   align-self: flex-start;
-  background: rgba(255, 220, 220, 0.4);
-  border: 1px solid rgba(255, 214, 186, 0.5);
+  background: rgba(189, 224, 254, 0.45);
+  border: 1px solid rgba(160, 196, 255, 0.5);
   color: var(--text-dark);
   font-size: 0.8rem;
   font-weight: 600;

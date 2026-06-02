@@ -35,7 +35,7 @@
 }
 
 .category-icon {
-  background: linear-gradient(135deg, var(--accent-pink) 0%, var(--accent-peach) 100%);
+  background: linear-gradient(135deg, var(--pastel-pink) 0%, var(--pastel-blue) 100%);
   color: var(--text-dark);
   font-size: 1.3rem;
   width: 46px;
@@ -45,7 +45,7 @@
   justify-content: center;
   border-radius: 50%;
   border: 1px solid var(--glass-border);
-  box-shadow: 0 4px 10px rgba(255, 214, 186, 0.3);
+  box-shadow: 0 4px 12px rgba(160, 196, 255, 0.35);
 }
 
 .category-header h3 {
@@ -64,7 +64,7 @@
 }
 
 .skill-chip {
-  background: rgba(255, 242, 235, 0.55);
+  background: rgba(255, 255, 255, 0.55);
   border: 1px solid var(--glass-border);
   border-radius: 30px;
   padding: 0.45rem 1rem;
@@ -93,10 +93,10 @@
 
 /* Chip Hover State */
 .skill-chip:hover {
-  background: var(--accent-peach);
-  border-color: rgba(255, 214, 186, 0.8);
+  background: var(--pastel-blue);
+  border-color: rgba(160, 196, 255, 0.8);
   transform: translateY(-2px);
-  box-shadow: 0 4px 10px rgba(255, 214, 186, 0.4);
+  box-shadow: 0 6px 14px rgba(160, 196, 255, 0.35);
 }
 
 .skill-chip:hover .chip-icon {
