@@ -9,7 +9,6 @@ import Gallery from './components/Gallery';
 import Education from './components/Education';
 import Contact from './components/Contact';
 import LiquidEther from './components/LiquidEther/LiquidEther';
-import MinimalistMarquee from './components/MinimalistMarquee/MinimalistMarquee';
 import './App.css';
 
 function AppContent() {
@@ -66,10 +65,8 @@ function AppContent() {
         </Routes>
       </main>
 
-      <MinimalistMarquee />
-
       <footer className="footer">
-        <p>&copy; 2026 Merve Safa Güneş.</p>
+        <p>&copy; 2026 Merve Safa Güneş. Tüm hakları saklıdır.</p>
       </footer>
     </div>
   );

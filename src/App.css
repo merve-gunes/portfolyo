@@ -29,15 +29,19 @@
 /* Footer layout */
 .footer {
   text-align: center;
-  padding: 2rem;
-  background: var(--glass-bg);
-  backdrop-filter: var(--glass-blur);
-  -webkit-backdrop-filter: var(--glass-blur);
-  border-top: 1px solid var(--glass-border);
-  color: var(--text-muted);
-  font-size: 0.9rem;
+  padding: 40px 0;
+  background: #FFFFFF;
+  font-family: 'Plus Jakarta Sans', sans-serif;
   position: relative;
   z-index: 10;
+}
+
+.footer p {
+  font-size: 14px;
+  font-weight: 400;
+  color: #8A807E;
+  margin: 0;
+  text-align: center;
 }
 
 /* Main content layout and overlap fix */

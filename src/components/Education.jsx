@@ -11,6 +11,37 @@ const educations = [
   },
 ];
 
+const certificates = [
+  {
+    id: 1,
+    title: 'Versiyon Kontrolleri: Git ve Github',
+    org: 'BTK Akademi',
+    date: 'Mart 2026',
+    link: '#',
+  },
+  {
+    id: 2,
+    title: 'CSS Essentials',
+    org: 'Cisco Networking Academy',
+    date: 'Ocak 2026',
+    link: '#',
+  },
+  {
+    id: 3,
+    title: 'Introduction to Cybersecurity',
+    org: 'Cisco Networking Academy',
+    date: 'Haziran 2025',
+    link: '#',
+  },
+  {
+    id: 4,
+    title: 'Frontend Eğitimi',
+    org: 'OSTIMTECH Business Administration',
+    date: 'Kasım 2025',
+    link: '#',
+  },
+];
+
 function Education() {
   return (
     <section className="education" id="egitim">
@@ -31,6 +62,27 @@ function Education() {
             </div>
           </div>
         ))}
+
+        <div className="education-divider"></div>
+
+        <h3 className="certificates-heading">Kurslar & Sertifikalar</h3>
+
+        <div className="certificates-grid">
+          {certificates.map((cert) => (
+            <div className="certificate-item" key={cert.id}>
+              <div className="certificate-info">
+                <span className="certificate-title">{cert.title}</span>
+                <div className="certificate-meta">
+                  <span>{cert.org}</span>
+                  <span>{cert.date}</span>
+                </div>
+              </div>
+              <a href={cert.link} className="certificate-link" target="_blank" rel="noopener noreferrer">
+                Sertifikayı Görüntüle
+              </a>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );

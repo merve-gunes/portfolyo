@@ -36,11 +36,11 @@ function Contact() {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!formData.name || !formData.email || !formData.message) return;
-    
+
     // Simulate submission success
     setSubmitted(true);
     setFormData({ name: '', email: '', message: '' });
-    
+
     setTimeout(() => {
       setSubmitted(false);
     }, 4000);
@@ -53,8 +53,7 @@ function Contact() {
   return (
     <section className="contact" id="iletisim">
       <h2 className="reveal">İletişim</h2>
-      <p className="contact-subtitle reveal reveal-delay-1">Benimle iletişime geçmekten çekinme! Sorularını sormak veya iş birliği yapmak için mesaj gönderebilirsin.</p>
-      
+
       <div className="contact-container reveal reveal-delay-2">
         {/* Left Side: Contact Cards */}
         <div className="contact-info-panel">
@@ -74,7 +73,7 @@ function Contact() {
         {/* Right Side: Message Form */}
         <div className="contact-form-panel glass-panel">
           <h3>Mesaj Gönder</h3>
-          
+
           {submitted ? (
             <div className="contact-success-msg">
               <span className="success-icon">✓</span>
