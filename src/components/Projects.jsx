@@ -10,8 +10,7 @@ const projects = [
     title: 'ProShot (AI CV Photo Converter)',
     description: 'Yapay zeka entegrasyonu ile gündelik ve sıradan portre fotoğraflarını profesyonel, temiz arka planlı ve şık CV vesikalıklarına dönüştüren modern bir web aracı.',
     image: proshotImg,
-    github: 'https://github.com/merve-gunes',
-    demo: '#',
+    githubUrl: 'https://github.com/merve-gunes/proshot',
     tags: ['React.js', 'AI API Integration', 'Glassmorphism', 'CSS3'],
     delayClass: 'reveal-delay-1',
   },
@@ -20,8 +19,7 @@ const projects = [
     title: 'Flora (E-Commerce Prototype)',
     description: 'İç mekan bitki ve çiçek satışı sunan, sepet yönetimi, kullanıcı dostu filtreleme ve modern ödeme akışına sahip minimalist e-ticaret arayüzü prototipi.',
     image: floraImg,
-    github: 'https://github.com/merve-gunes',
-    demo: '#',
+    githubUrl: 'https://github.com/merve-gunes/flora',
     tags: ['React.js', 'State Management', 'CSS Grid', 'Flexbox'],
     delayClass: 'reveal-delay-2',
   },
@@ -30,8 +28,7 @@ const projects = [
     title: 'Hava Durumu Uygulaması',
     description: 'Açık hava durumu API\'leri aracılığıyla anlık konum verisi çekerek minimalist, hava durumuna göre renk değiştiren dinamik ve cam efekti kullanan hava durumu paneli.',
     image: weatherImg,
-    github: 'https://github.com/merve-gunes',
-    demo: '#',
+    githubUrl: 'https://github.com/merve-gunes/weather-app',
     tags: ['Vanilla JS', 'REST API Fetch', 'Glassmorphic UI', 'Aesthetic Charts'],
     delayClass: 'reveal-delay-3',
   },
@@ -58,11 +55,8 @@ function Projects() {
                 ))}
               </div>
               <div className="project-links">
-                <a href={project.github} target="_blank" rel="noreferrer">
+                <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
                   <FaGithub /> GitHub
-                </a>
-                <a href={project.demo} target="_blank" rel="noreferrer">
-                  <FaExternalLinkAlt /> Demo
                 </a>
               </div>
             </div>
