@@ -1,5 +1,7 @@
 .contact {
   width: 100%;
+  padding-top: 140px !important;
+  scroll-margin-top: 100px;
 }
 
 .contact-subtitle {
@@ -50,14 +52,14 @@
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  box-shadow: 0 4px 12px rgba(160, 196, 255, 0.35);
+  box-shadow: 0 4px 12px rgba(243, 215, 202, 0.4);
   border: 1px solid var(--glass-border);
   transition: var(--transition-smooth);
 }
 
 .contact-card:hover .contact-icon {
   transform: scale(1.1) rotate(-10deg);
-  box-shadow: 0 6px 15px rgba(255, 214, 186, 0.6);
+  box-shadow: 0 6px 15px rgba(243, 215, 202, 0.6);
 }
 
 .contact-card-text h3 {
@@ -142,7 +144,7 @@
 .form-group textarea:focus {
   border-color: var(--pastel-blue);
   background: rgba(255, 255, 255, 0.6);
-  box-shadow: 0 0 14px rgba(160, 196, 255, 0.6);
+  box-shadow: 0 0 14px rgba(243, 215, 202, 0.6);
 }
 
 .contact-submit-btn {
@@ -177,7 +179,7 @@
   font-size: 1.5rem;
   font-weight: bold;
   margin-bottom: 1.2rem;
-  box-shadow: 0 4px 12px rgba(160, 196, 255, 0.35);
+  box-shadow: 0 4px 12px rgba(243, 215, 202, 0.4);
   border: 1px solid var(--glass-border);
 }
 

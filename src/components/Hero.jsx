@@ -1,4 +1,5 @@
 import heroArt from '../assets/hero_workspace.png';
+import BlurText from './BlurText/BlurText';
 import './Hero.css';
 
 function Hero() {
@@ -9,7 +10,14 @@ function Hero() {
           <span className="hero-badge">Yazılım Mühendisliği Öğrencisi</span>
           <h1>
             Merhaba, ben <br />
-            <span className="gradient-text">Merve Safa Güneş</span>
+            <BlurText
+              text="Merve Safa Güneş"
+              delay={50}
+              animateBy="letters"
+              direction="top"
+              stepDuration={0.04}
+              className="hero-name-animated"
+            />
           </h1>
           <p>
             Ostim Teknik Üniversitesi 2. sınıf öğrencisiyim. Web geliştirme ve modern yazılım mühendisliği pratikleri üzerine kendimi geliştiriyorum. Soft ve premium tasarımlarla, işlevsel ve estetik kullanıcı deneyimleri inşa etmeye odaklanıyorum.

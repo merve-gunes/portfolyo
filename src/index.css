@@ -1,22 +1,26 @@
 :root {
-  /* Vibrant Holographic Pastel Color Palette */
-  --pastel-pink: #FFC6FF;
-  --pastel-blue: #A0C4FF;
+  /* Minimalist White & Soft Pink Color Palette */
+  --pastel-pink: #D48C98; /* Soft Rose Pink */
+  --pastel-blue: #E8B9C1; /* Soft Pale Pink */
   
-  --bg-start: #FAF9FC;
-  --bg-end: #F0F3FA;
+  --bg-start: #FFFFFF; /* Pure White */
+  --bg-end: #FFFFFF; /* Pure White */
   
-  --text-dark: #2a2d34;
-  --text-muted: #5c606a;
+  --text-dark: #D48C98; /* For main headings & navbar links */
+  --text-muted: #4A3E3F; /* For body text (legible charcoal/rose) */
+  
+  /* Contact Compatibility Variables */
+  --accent-pink: var(--pastel-pink);
+  --accent-peach: var(--pastel-blue);
   
   /* Glassmorphism */
-  --glass-bg: rgba(255, 255, 255, 0.45);
-  --glass-border: rgba(255, 255, 255, 0.6);
-  --glass-blur: blur(16px);
+  --glass-bg: rgba(255, 255, 255, 0.9);
+  --glass-border: rgba(212, 140, 152, 0.25); /* Soft pink transparent border */
+  --glass-blur: blur(8px);
   
-  /* Shadows (Vibrant Pastel drop-shadows) */
-  --shadow-soft: 0 16px 32px rgba(160, 196, 255, 0.25), 0 4px 12px rgba(255, 198, 255, 0.2);
-  --shadow-hover: 0 24px 48px rgba(160, 196, 255, 0.45), 0 8px 24px rgba(255, 198, 255, 0.35);
+  /* Shadows (Minimal Clean Soft Pink) */
+  --shadow-soft: 0 8px 24px rgba(212, 140, 152, 0.06);
+  --shadow-hover: 0 12px 32px rgba(212, 140, 152, 0.12);
   
   /* Borders and Radius */
   --radius-lg: 24px;
@@ -38,26 +42,31 @@ html {
 }
 
 body {
-  font-family: 'Outfit', sans-serif;
-  background: linear-gradient(135deg, var(--bg-start) 0%, var(--bg-end) 100%);
-  background-attachment: fixed;
-  color: var(--text-dark);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background: #FFFFFF;
+  color: var(--text-muted);
   min-height: 100vh;
   overflow-x: hidden;
   line-height: 1.6;
+  font-weight: 500;
 }
 
-h1, h2, h3 {
-  font-family: 'Outfit', sans-serif;
+p {
+  font-weight: 500;
+  color: var(--text-muted);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
   font-weight: 800;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.01em;
   color: var(--text-dark);
 }
 
 /* Glassmorphism Card Style Utility with Gradient Border */
 .glass-panel {
-  background: linear-gradient(rgba(255, 255, 255, 0.45), rgba(255, 255, 255, 0.45)) padding-box,
-              linear-gradient(135deg, var(--pastel-pink), var(--pastel-blue)) border-box;
+  background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)) padding-box,
+              linear-gradient(135deg, var(--pastel-blue), var(--pastel-pink)) border-box;
   border: 1px solid transparent;
   backdrop-filter: var(--glass-blur);
   -webkit-backdrop-filter: var(--glass-blur);
@@ -73,13 +82,13 @@ h1, h2, h3 {
 
 /* Interactive Element Styles */
 .btn-accent {
-  background: var(--pastel-blue);
-  color: var(--text-dark);
-  border: 1px solid transparent;
+  background: #FFFFFF;
+  color: #D48C98;
+  border: 1px solid #D48C98;
   font-weight: 600;
   cursor: pointer;
   transition: var(--transition-smooth);
-  box-shadow: 0 8px 20px rgba(160, 196, 255, 0.4);
+  box-shadow: 0 4px 12px rgba(212, 140, 152, 0.1);
   display: inline-flex;
   align-items: center;
   gap: 8px;
@@ -88,8 +97,9 @@ h1, h2, h3 {
 
 .btn-accent:hover {
   transform: translateY(-3px);
-  background: var(--pastel-pink);
-  box-shadow: 0 12px 24px rgba(255, 198, 255, 0.7);
+  background: #D48C98;
+  color: #FFFFFF;
+  box-shadow: 0 8px 20px rgba(212, 140, 152, 0.25);
 }
 
 .btn-accent:active {
@@ -125,7 +135,7 @@ section h2::after {
   width: 60px;
   height: 4px;
   border-radius: 2px;
-  background: linear-gradient(90deg, var(--pastel-pink), var(--pastel-blue));
+  background: linear-gradient(90deg, var(--pastel-blue), var(--pastel-pink));
 }
 
 @media (max-width: 768px) {

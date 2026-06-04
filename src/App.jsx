@@ -8,6 +8,7 @@ import Etkinlikler from './components/Etkinlikler';
 import Education from './components/Education';
 import Contact from './components/Contact';
 import LiquidEther from './components/LiquidEther/LiquidEther';
+import MinimalistMarquee from './components/MinimalistMarquee/MinimalistMarquee';
 import './App.css';
 
 function App() {
@@ -37,7 +38,7 @@ function App() {
 
   return (
     <div className="app-container">
-      <LiquidEther colors={['#FFDCDC', '#BDE0FE', '#FFC6FF', '#A0C4FF']} />
+      {/* <LiquidEther colors={['#F5EEE6', '#FFF8E3', '#F3D7CA', '#E6A4B4']} /> */}
 
       <Navbar />
       <main>
@@ -50,8 +51,10 @@ function App() {
         <Contact />
       </main>
 
+      <MinimalistMarquee />
+
       <footer className="footer">
-        <p>&copy; {new Date().getFullYear()} Merve Safa Güneş. Sevgiyle Tasarlandı.</p>
+        <p>&copy; 2026 Merve Safa Güneş.</p>
       </footer>
     </div>
   );

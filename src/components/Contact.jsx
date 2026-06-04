@@ -23,7 +23,7 @@ const contacts = [
     id: 3,
     label: 'LinkedIn',
     value: 'linkedin.com/in/merve-safa-gunes',
-    href: 'https://linkedin.com/in/merve-safa-gunes',
+    href: 'https://www.linkedin.com/in/merve-safa-g%C3%BCne%C5%9F-39438432a/',
     icon: <FaLinkedin />,
     delayClass: 'reveal-delay-3',
   },
@@ -90,7 +90,7 @@ function Contact() {
                   name="name"
                   value={formData.name}
                   onChange={handleChange}
-                  placeholder="Merve Safa..."
+                  placeholder="Adınız Soyadınız..."
                   required
                 />
               </div>
@@ -103,7 +103,7 @@ function Contact() {
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
-                  placeholder="merve@example.com"
+                  placeholder="isim@example.com"
                   required
                 />
               </div>

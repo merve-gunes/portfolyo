@@ -25,7 +25,7 @@
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  box-shadow: 0 6px 16px rgba(160, 196, 255, 0.35);
+  box-shadow: 0 6px 16px rgba(243, 215, 202, 0.4);
   border: 1px solid var(--glass-border);
 }
 
@@ -42,8 +42,8 @@
 
 .education-year {
   align-self: flex-start;
-  background: rgba(189, 224, 254, 0.45);
-  border: 1px solid rgba(160, 196, 255, 0.5);
+  background: rgba(243, 215, 202, 0.45);
+  border: 1px solid rgba(230, 164, 180, 0.4);
   color: var(--text-dark);
   font-size: 0.8rem;
   font-weight: 600;

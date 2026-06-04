@@ -69,7 +69,7 @@
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  box-shadow: 0 4px 12px rgba(160, 196, 255, 0.35);
+  box-shadow: 0 4px 12px rgba(243, 215, 202, 0.4);
   border: 1px solid var(--glass-border);
 }
 

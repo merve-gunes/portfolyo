@@ -25,16 +25,15 @@
 }
 
 .hero-badge {
-  background: var(--glass-bg);
-  backdrop-filter: var(--glass-blur);
-  border: 1px solid var(--glass-border);
-  color: var(--text-muted);
+  background: #FFFFFF;
+  border: 1px solid var(--pastel-pink);
+  color: var(--pastel-pink);
   padding: 0.4rem 1.2rem;
   border-radius: 30px;
   font-size: 0.85rem;
   font-weight: 500;
   margin-bottom: 1.5rem;
-  box-shadow: 0 4px 10px rgba(255, 214, 186, 0.2);
+  box-shadow: var(--shadow-soft);
 }
 
 .hero-text h1 {
@@ -47,10 +46,20 @@
 }
 
 .gradient-text {
-  background: linear-gradient(135deg, #ff8da1 0%, #7da2ff 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #D48C98;
+}
+
+.hero-name-animated {
+  display: inline-flex;
+  flex-wrap: wrap;
+}
+
+.hero-name-animated span {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  color: #D48C98;
+  display: inline-block;
 }
 
 .hero-text p {
@@ -75,13 +84,12 @@
 }
 
 .btn-secondary {
-  background: linear-gradient(rgba(255, 255, 255, 0.45), rgba(255, 255, 255, 0.45)) padding-box,
-              linear-gradient(135deg, var(--pastel-pink), var(--pastel-blue)) border-box;
-  border: 1px solid transparent;
-  color: var(--text-dark);
+  background: #FFFFFF;
+  color: #D48C98;
+  border: 1px solid #D48C98;
   cursor: pointer;
   transition: var(--transition-smooth);
-  box-shadow: var(--shadow-soft);
+  box-shadow: 0 4px 12px rgba(212, 140, 152, 0.1);
   display: inline-flex;
   align-items: center;
   gap: 8px;
@@ -90,9 +98,9 @@
 
 .btn-secondary:hover {
   transform: translateY(-3px);
-  box-shadow: var(--shadow-hover);
-  background: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)) padding-box,
-              linear-gradient(135deg, var(--pastel-blue), var(--pastel-pink)) border-box;
+  background: #D48C98;
+  color: #FFFFFF;
+  box-shadow: 0 8px 20px rgba(212, 140, 152, 0.25);
 }
 
 .btn-secondary:active {
@@ -132,9 +140,9 @@
   transform: translate(-50%, -50%);
   width: 110%;
   height: 110%;
-  background: linear-gradient(135deg, var(--pastel-pink) 0%, var(--pastel-blue) 100%);
+  background: transparent;
   filter: blur(40px);
-  opacity: 0.45;
+  opacity: 0;
   z-index: 1;
   border-radius: 50%;
 }
