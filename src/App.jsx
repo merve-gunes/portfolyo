@@ -49,11 +49,6 @@ function AppContent() {
             <>
               <Hero />
               <About />
-              <Skills />
-              <Projects />
-              <Gallery />
-              <Education />
-              <Contact />
             </>
           } />
           <Route path="/hakkinda" element={<About />} />

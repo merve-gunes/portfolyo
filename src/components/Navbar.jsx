@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import './Navbar.css';
 import sunLogo from '../assets/sun-logo.png';
 
@@ -5,16 +6,16 @@ function Navbar() {
   return (
     <header className="navbar-header">
       <nav className="navbar-container">
-        <a href="/" className="navbar-logo">
+        <Link to="/" className="navbar-logo">
           <img src={sunLogo} alt="Merve Safa Güneş Logo" className="navbar-logo-img" />
-        </a>
+        </Link>
         <ul className="navbar-links">
-          <li><a href="/hakkinda" target="_blank" rel="noopener noreferrer">Hakkımda</a></li>
-          <li><a href="/yetenekler" target="_blank" rel="noopener noreferrer">Yetenekler</a></li>
-          <li><a href="/projeler" target="_blank" rel="noopener noreferrer">Projeler</a></li>
-          <li><a href="/galeri" target="_blank" rel="noopener noreferrer">Galeri</a></li>
-          <li><a href="/egitim" target="_blank" rel="noopener noreferrer">Eğitim</a></li>
-          <li><a href="/iletisim" target="_blank" rel="noopener noreferrer">İletişim</a></li>
+          <li><Link to="/hakkinda">Hakkımda</Link></li>
+          <li><Link to="/yetenekler">Yetenekler</Link></li>
+          <li><Link to="/projeler">Projeler</Link></li>
+          <li><Link to="/galeri">Galeri</Link></li>
+          <li><Link to="/egitim">Eğitim</Link></li>
+          <li><Link to="/iletisim">İletişim</Link></li>
         </ul>
       </nav>
     </header>
