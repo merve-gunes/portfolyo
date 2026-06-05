@@ -10,13 +10,7 @@ import SheBuildsImg from '../assets/gallery_shebuilds_event.jpg';
 import './Gallery.css';
 
 const galleryItems = [
-  {
-    id: 1,
-    title: 'Ankara Build Club - Fikirden Validasyona',
-    category: 'Etkinlik • 8 Mart 2026',
-    subtitle: 'Yapay zeka ile prototipleme workshop deneyimi.',
-    image: AnkaraBuildClubImg,
-  },
+
   {
     id: 2,
     title: 'Huawei Student Developers - OSTİMTECH',
@@ -52,46 +46,28 @@ const galleryItems = [
     subtitle: 'Dünya Kadınlar Günü Ankara buluşması ve yapay zeka workshop.',
     image: SheBuildsImg,
   },
-  {
-    id: 7,
-    title: 'Flora Boutique Flower Shop - UI/UX Design',
-    category: 'Tasarım',
-    subtitle: 'Minimalist e-ticaret arayüzü konsepti.',
-    image: FloraBoutiqueImg,
-  },
-  {
-    id: 8,
-    title: 'Minimalist Sun Logo - Branding Iterations',
-    category: 'Marka',
-    subtitle: 'Güneş logosu tasarım eskizleri ve varyasyonları.',
-    image: SunLogoImg,
-  },
-  {
-    id: 9,
-    title: 'Modern Weather App - API Layout Sketch',
-    category: 'Geliştirme',
-    subtitle: 'Hava durumu paneli arayüz planlaması.',
-    image: WeatherAppImg,
-  },
+
 ];
 
 function Gallery() {
   return (
     <section className="gallery" id="galeri">
-      <h2 className="reveal">Galeri</h2>
-      <div className="gallery-grid reveal reveal-delay-1">
-        {galleryItems.map((item) => (
-          <div className="gallery-item-card" key={item.id}>
-            <div className="gallery-image-wrapper">
-              <img src={item.image} alt={item.title} className="gallery-image" />
-              <div className="gallery-overlay">
-                <span className="gallery-category-badge">{item.category}</span>
-                <h3>{item.title}</h3>
-                <span className="gallery-subtitle">{item.subtitle}</span>
+      <div className="gallery-container reveal reveal-delay-1">
+        <h2 className="section-title">Galeri</h2>
+        <div className="gallery-grid">
+          {galleryItems.map((item) => (
+            <div className="gallery-item-card" key={item.id}>
+              <div className="gallery-image-wrapper">
+                <img src={item.image} alt={item.title} className="gallery-image" />
+                <div className="gallery-overlay">
+                  <span className="gallery-category-badge">{item.category}</span>
+                  <h3>{item.title}</h3>
+                  <span className="gallery-subtitle">{item.subtitle}</span>
+                </div>
               </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </section>
   );

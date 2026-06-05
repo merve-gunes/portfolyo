@@ -51,7 +51,6 @@ function AppContent() {
               <About />
             </>
           } />
-          <Route path="/hakkinda" element={<About />} />
           <Route path="/yetenekler" element={<Skills />} />
           <Route path="/projeler" element={<Projects />} />
           <Route path="/galeri" element={<Gallery />} />

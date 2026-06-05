@@ -1,101 +1,91 @@
+.about {
+  padding: 60px 0;
+}
+
 .about-container {
   width: 100%;
   max-width: 1000px;
   margin-top: 1rem;
 }
 
-.about-glass-card {
-  padding: 3rem;
+.about-content-wrapper {
+  padding: 2rem 0;
   display: flex;
-  gap: 3.5rem;
-  align-items: stretch;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
 }
 
 .about-intro {
-  flex: 1.2;
+  flex: 1.5;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
 .about-intro h3 {
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   font-weight: 800;
   letter-spacing: -0.03em;
   color: var(--text-dark);
-  margin-bottom: 1.2rem;
+  margin-bottom: 1.5rem;
   line-height: 1.4;
 }
 
 .about-intro p {
-  font-size: 0.92rem;
+  font-size: 0.98rem;
   color: var(--text-muted);
   margin-bottom: 1.2rem;
-  line-height: 1.6;
+  line-height: 1.7;
 }
 
 .about-intro p:last-child {
   margin-bottom: 0;
 }
 
-.about-traits {
-  flex: 0.8;
+.about-profile-wrapper {
+  flex: 0.9;
   display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
   justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
-.trait-item {
-  display: flex;
-  gap: 1.2rem;
-  align-items: flex-start;
-  padding: 1rem;
-  border-radius: var(--radius-md);
+.about-profile-photo {
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid #F3D7CA;
+  box-shadow: 0 12px 32px rgba(243, 215, 202, 0.25);
   transition: var(--transition-smooth);
 }
 
-.trait-item:hover {
-  background: rgba(255, 255, 255, 0.3);
-}
-
-.trait-icon {
-  background: linear-gradient(135deg, var(--pastel-pink) 0%, var(--pastel-blue) 100%);
-  color: var(--text-dark);
-  font-size: 1.2rem;
-  min-width: 44px;
-  height: 44px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  box-shadow: 0 4px 12px rgba(243, 215, 202, 0.4);
-  border: 1px solid var(--glass-border);
-}
-
-.trait-item h4 {
-  font-size: 1.05rem;
-  font-weight: 600;
-  color: var(--text-dark);
-  margin-bottom: 0.3rem;
-}
-
-.trait-item p {
-  font-size: 0.84rem;
-  color: var(--text-muted);
-  line-height: 1.45;
+.about-profile-photo:hover {
+  transform: translateY(-5px) scale(1.02);
+  border-color: var(--pastel-pink);
+  box-shadow: 0 16px 40px rgba(230, 164, 180, 0.35);
 }
 
 /* Responsive configurations */
 @media (max-width: 992px) {
-  .about-glass-card {
-    flex-direction: column;
+  .about {
+    padding: 60px 5%;
+  }
+
+  .about-content-wrapper {
+    flex-direction: column-reverse;
     gap: 2.5rem;
-    padding: 2rem;
+    padding: 2rem 0;
+    align-items: center;
   }
   
-  .about-intro, .about-traits {
+  .about-intro, .about-profile-wrapper {
     width: 100%;
+  }
+  
+  .about-intro {
+    text-align: center;
   }
 }
 
@@ -105,14 +95,11 @@
   }
   
   .about-intro h3 {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
   }
   
-  .trait-item {
-    padding: 0.5rem 0;
-  }
-  
-  .trait-item:hover {
-    background: transparent;
+  .about-profile-photo {
+    width: 200px;
+    height: 200px;
   }
 }

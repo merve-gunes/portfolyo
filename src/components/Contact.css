@@ -12,11 +12,17 @@
   line-height: 1.6;
 }
 
+.contact-section-wrapper {
+  width: 100%;
+  max-width: 1000px;
+  display: flex;
+  flex-direction: column;
+}
+
 .contact-container {
   display: flex;
   gap: 3rem;
   width: 100%;
-  max-width: 1000px;
   align-items: stretch;
 }
 

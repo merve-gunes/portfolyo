@@ -37,31 +37,33 @@ const projects = [
 function Projects() {
   return (
     <section className="projects" id="projeler">
-      <h2 className="reveal">Projeler</h2>
-      <div className="projects-grid">
-        {projects.map((project) => (
-          <div className={`project-card glass-panel reveal ${project.delayClass}`} key={project.id}>
-            <div className="project-image-container">
-              <img src={project.image} alt={project.title} className="project-image" />
-            </div>
-            <div className="project-info">
-              <h3>{project.title}</h3>
-              <p>{project.description}</p>
-              <div className="project-tags">
-                {project.tags.map((tag) => (
-                  <span key={tag} className="project-tag-chip">
-                    {tag}
-                  </span>
-                ))}
+      <div className="projects-container reveal reveal-delay-1">
+        <h2 className="section-title">Projeler</h2>
+        <div className="projects-grid">
+          {projects.map((project) => (
+            <div className={`project-card glass-panel reveal ${project.delayClass}`} key={project.id}>
+              <div className="project-image-container">
+                <img src={project.image} alt={project.title} className="project-image" />
               </div>
-              <div className="project-links">
-                <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
-                  <FaGithub /> GitHub
-                </a>
+              <div className="project-info">
+                <h3>{project.title}</h3>
+                <p>{project.description}</p>
+                <div className="project-tags">
+                  {project.tags.map((tag) => (
+                    <span key={tag} className="project-tag-chip">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+                <div className="project-links">
+                  <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
+                    <FaGithub /> GitHub
+                  </a>
+                </div>
               </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </section>
   );

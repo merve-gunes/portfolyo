@@ -10,7 +10,7 @@ function Navbar() {
           <img src={sunLogo} alt="Merve Safa Güneş Logo" className="navbar-logo-img" />
         </Link>
         <ul className="navbar-links">
-          <li><Link to="/hakkinda">Hakkımda</Link></li>
+          <li><Link to="/">Hakkımda</Link></li>
           <li><Link to="/yetenekler">Yetenekler</Link></li>
           <li><Link to="/projeler">Projeler</Link></li>
           <li><Link to="/galeri">Galeri</Link></li>
