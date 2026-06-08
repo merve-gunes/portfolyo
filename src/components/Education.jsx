@@ -1,15 +1,5 @@
-import { FaGraduationCap } from 'react-icons/fa';
+import { useState } from 'react';
 import './Education.css';
-
-const educations = [
-  {
-    id: 1,
-    school: 'OSTİM TEKNİK ÜNİVERSİTESİ',
-    department: 'Yazılım Mühendisliği',
-    year: '2024 — Devam Ediyor',
-    description: 'Yazılım mühendisliğinin temelleri, algoritma analizi, nesne yönelimli programlama, veritabanı yönetimi ve web teknolojileri üzerine akademik eğitim alıyorum. Teorik bilgiyi pratik projelerle pekiştiriyorum.',
-  },
-];
 
 const certificates = [
   {
@@ -17,75 +7,103 @@ const certificates = [
     title: 'Versiyon Kontrolleri: Git ve Github',
     org: 'BTK Akademi',
     date: 'Mart 2026',
-    link: '#',
+    image: '/certificates/git.jpg',
   },
   {
     id: 2,
     title: 'CSS Essentials',
     org: 'Cisco Networking Academy',
     date: 'Ocak 2026',
-    link: '#',
+    image: '/certificates/css.jpg',
   },
   {
     id: 3,
     title: 'Introduction to Cybersecurity',
     org: 'Cisco Networking Academy',
     date: 'Haziran 2025',
-    link: '#',
+    image: '/certificates/cybersecurity.jpg',
   },
   {
     id: 4,
     title: 'Frontend Eğitimi',
     org: 'OSTIMTECH Business Administration',
     date: 'Kasım 2025',
-    link: '#',
+    image: '/certificates/frontend.jpg',
   },
 ];
 
 function Education() {
+  const [selectedCert, setSelectedCert] = useState(null);
+
   return (
     <section className="education" id="egitim">
       <div className="education-container reveal reveal-delay-1">
-        <h2 className="section-title">Eğitim</h2>
-        <div className="education-list">
-          {educations.map((edu) => (
-            <div className="education-card glass-panel" key={edu.id}>
-              <div className="education-icon-wrapper">
-                <span className="education-icon">
-                  <FaGraduationCap />
-                </span>
-              </div>
-              <div className="education-info">
-                <span className="education-year">{edu.year}</span>
-                <h3>{edu.school}</h3>
-                <h4>{edu.department}</h4>
-                <p>{edu.description}</p>
-              </div>
+        <h2 className="section-title">Eğitim & Deneyim</h2>
+
+        <div className="education-experience-grid">
+          <div className="grid-column">
+            <h3 className="column-title">Eğitim</h3>
+            <div className="timeline-item">
+              <span className="timeline-year">2024 — Devam Ediyor</span>
+              <h4 className="timeline-school">OSTİM Teknik Üniversitesi</h4>
+              <span className="timeline-dept">Yazılım Mühendisliği</span>
+              <p className="timeline-desc">
+                Yazılım mühendisliğinin temelleri, algoritma analizi, nesne yönelimli programlama, veritabanı yönetimi ve web teknolojileri üzerine akademik eğitim alıyorum. Teorik bilgiyi pratik projelerle pekiştiriyorum.
+              </p>
             </div>
-          ))}
+          </div>
 
-          <div className="education-divider"></div>
-
-          <h3 className="certificates-heading">Kurslar & Sertifikalar</h3>
-
-          <div className="certificates-grid">
-            {certificates.map((cert) => (
-              <div className="certificate-item" key={cert.id}>
-                <div className="certificate-info">
-                  <span className="certificate-title">{cert.title}</span>
-                  <div className="certificate-meta">
-                    <span>{cert.org}</span>
-                    <span>{cert.date}</span>
-                  </div>
-                </div>
-                <a href={cert.link} className="certificate-link" target="_blank" rel="noopener noreferrer">
-                  Sertifikayı Görüntüle
-                </a>
-              </div>
-            ))}
+          <div className="grid-column">
+            <h3 className="column-title">Deneyim</h3>
+            <div className="timeline-item">
+              <span className="timeline-year">2026 — Devam Ediyor</span>
+              <h4 className="timeline-school">Yazılım Mühendisi Stajyeri</h4>
+              <span className="timeline-dept">Omedya A.Ş. | Dijital Ajans </span>
+              <p className="timeline-desc">
+                İş yeri stajı kapsamında firmanın aktif projelerinde modern web teknolojileri ve yazılım mühendisliği pratikleri üzerine deneyim kazanıyorum.
+              </p>
+            </div>
           </div>
         </div>
+
+        <div className="education-divider"></div>
+
+        <h3 className="certificates-heading">Kurslar & Sertifikalar</h3>
+
+        <div className="certificates-grid">
+          {certificates.map((cert) => (
+            <div className="certificate-item" key={cert.id}>
+              <div className="certificate-info">
+                <span className="certificate-title">{cert.title}</span>
+                <div className="certificate-meta">
+                  <span>{cert.org}</span>
+                  <span>{cert.date}</span>
+                </div>
+              </div>
+              <button 
+                type="button" 
+                className="certificate-trigger" 
+                onClick={() => setSelectedCert(cert.image)}
+                aria-label={`${cert.title} - Sertifikayı Görüntüle`}
+              >
+                <img src={cert.image} className="cert-thumbnail" alt={cert.title} />
+              </button>
+            </div>
+          ))}
+        </div>
       </div>
+
+      {selectedCert && (
+        <div className="modal-overlay" onClick={() => setSelectedCert(null)}>
+          <button className="modal-close" onClick={(e) => { e.stopPropagation(); setSelectedCert(null); }}>X</button>
+          <img 
+            src={selectedCert} 
+            className="modal-image" 
+            alt="Sertifika Görünümü" 
+            onClick={(e) => e.stopPropagation()} 
+          />
+        </div>
+      )}
     </section>
   );
 }

@@ -18,7 +18,7 @@ function Hero() {
             />
           </h1>
           <p>
-            Ostim Teknik Üniversitesi 2. sınıf öğrencisiyim. Web geliştirme ve modern yazılım mühendisliği pratikleri üzerine kendimi geliştiriyorum. Soft ve premium tasarımlarla, işlevsel ve estetik kullanıcı deneyimleri inşa etmeye odaklanıyorum.
+            Ostim Teknik Üniversitesi 2. sınıf öğrencisiyim. Web geliştirme ve modern yazılım mühendisliği pratikleri üzerine kendimi geliştiriyorum.Özellikle React ekosistemiyle ölçeklenebilir web uygulamaları geliştirmeye ve AI destekli geliştirme araçlarıyla modern kod mimarileri inşa etmeye odaklanıyorum.
           </p>
           <div className="hero-actions">
             <a href="#projeler" className="btn-accent hero-btn">
@@ -29,7 +29,7 @@ function Hero() {
             </a>
           </div>
         </div>
-        
+
         <div className="hero-visual">
           <div className="hero-sun-container">
             <svg viewBox="0 0 400 400" className="abstract-sun-svg" xmlns="http://www.w3.org/2000/svg">
@@ -67,7 +67,7 @@ function Hero() {
                 <circle cx="200" cy="320" r="2.5" fill="#BA6B78" />
                 <circle cx="80" cy="200" r="2.5" fill="#BA6B78" />
                 <circle cx="320" cy="200" r="2.5" fill="#BA6B78" />
-                
+
                 {/* Micro ticks around outer ring */}
                 <path d="M 200,65 L 200,55 M 200,345 L 200,335 M 65,200 L 55,200 M 345,200 L 335,200" stroke="#BA6B78" strokeWidth="1" opacity="0.6" />
               </g>
@@ -76,7 +76,7 @@ function Hero() {
               <g className="sun-pulse">
                 {/* Thin outline concentric ring */}
                 <circle cx="200" cy="200" r="62" fill="none" stroke="#F3D7CA" strokeWidth="1.2" opacity="0.6" />
-                
+
                 {/* Main geometric sun disc */}
                 <circle cx="200" cy="200" r="50" fill="url(#sunGrad)" opacity="0.85" />
                 <circle cx="200" cy="200" r="50" fill="none" stroke="#FFFFFF" strokeWidth="1" opacity="0.4" />

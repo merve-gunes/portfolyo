@@ -14,7 +14,7 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
   background: transparent;
   backdrop-filter: none;
@@ -35,11 +35,18 @@
   text-decoration: none;
   color: var(--text-dark);
   transition: var(--transition-smooth);
+  background: none;
+  padding: 0;
 }
 
 .navbar-logo-img {
   height: 48px;
   width: auto;
+}
+
+.navbar-logo img {
+  mix-blend-mode: multiply;
+  background: transparent !important;
 }
 
 .navbar-logo:hover {

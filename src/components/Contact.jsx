@@ -56,13 +56,13 @@ function Contact() {
         <h2 className="section-title">İletişim</h2>
 
         <div className="contact-container">
-          {/* Left Side: Contact Cards */}
+          {/* Left Side: Contact Links */}
           <div className="contact-info-panel">
-            <div className="contact-cards-list">
+            <div className="contact-social-list">
               {contacts.map((item) => (
-                <a href={item.href} target="_blank" rel="noreferrer" className="contact-card glass-panel" key={item.id}>
-                  <span className="contact-icon">{item.icon}</span>
-                  <div className="contact-card-text">
+                <a href={item.href} target="_blank" rel="noreferrer" className="contact-social-link" key={item.id}>
+                  <span className="contact-social-icon">{item.icon}</span>
+                  <div className="contact-social-info">
                     <h3>{item.label}</h3>
                     <p>{item.value}</p>
                   </div>
@@ -72,7 +72,7 @@ function Contact() {
           </div>
 
           {/* Right Side: Contact Form */}
-          <div className="contact-form-panel glass-panel">
+          <div className="contact-form-panel">
             {submitted ? (
               <div className="contact-success-msg">
                 <span className="success-icon"><FaPaperPlane /></span>
@@ -120,7 +120,7 @@ function Contact() {
                   ></textarea>
                 </div>
 
-                <button type="submit" className="btn-accent contact-submit-btn">
+                <button type="submit" className="contact-submit-btn">
                   Gönder <FaPaperPlane />
                 </button>
               </form>
