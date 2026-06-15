@@ -7,6 +7,7 @@
   padding: 1.8rem 4rem;
   background: transparent;
   transition: var(--transition-smooth);
+  pointer-events: none;
 }
 
 .navbar-container {
@@ -23,6 +24,7 @@
   box-shadow: none;
   padding: 0;
   transition: var(--transition-smooth);
+  pointer-events: auto;
 }
 
 .navbar-logo {
@@ -46,6 +48,7 @@
 
 .navbar-logo img {
   mix-blend-mode: multiply;
+  object-fit: contain;
   background: transparent !important;
 }
 

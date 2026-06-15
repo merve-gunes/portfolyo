@@ -48,6 +48,8 @@
 .main-content {
   min-height: calc(100vh - 150px);
   padding-top: 120px;
+  position: relative;
+  z-index: 10; /* Strictly above background layers */
 }
 
 /* Ensure the first section on any page (including standalone route pages) starts exactly at top: 120px */
