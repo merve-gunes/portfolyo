@@ -56,15 +56,15 @@
   height: 260px;
   border-radius: 50%;
   object-fit: cover;
-  border: 1px solid #F3D7CA;
-  box-shadow: 0 12px 32px rgba(243, 215, 202, 0.25);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--shadow-soft);
   transition: var(--transition-smooth);
 }
 
 .about-profile-photo:hover {
   transform: translateY(-5px) scale(1.02);
   border-color: var(--pastel-pink);
-  box-shadow: 0 16px 40px rgba(230, 164, 180, 0.35);
+  box-shadow: var(--shadow-hover);
 }
 
 /* Responsive configurations */

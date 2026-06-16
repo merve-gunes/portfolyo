@@ -1,6 +1,6 @@
 import AnkaraBuildClubImg from '../assets/etkinlik1.jpg';
 import FloraBoutiqueImg from '../assets/flora.png';
-import SunLogoImg from '../assets/sun-logo.png';
+import SunLogoImg from '../assets/logo.png';
 import WeatherAppImg from '../assets/weather.png';
 import HsdBannerImg from '../assets/gallery_hsd_banner.jpg';
 import HsdHackathonImg from '../assets/gallery_hsd_hackathon.jpg';

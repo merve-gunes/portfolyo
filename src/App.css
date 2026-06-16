@@ -30,7 +30,7 @@
 .footer {
   text-align: center;
   padding: 40px 0;
-  background: #FFFFFF;
+  background: transparent;
   font-family: 'Plus Jakarta Sans', sans-serif;
   position: relative;
   z-index: 10;
@@ -39,7 +39,7 @@
 .footer p {
   font-size: 14px;
   font-weight: 400;
-  color: #8A807E;
+  color: var(--text-muted);
   margin: 0;
   text-align: center;
 }

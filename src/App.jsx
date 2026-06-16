@@ -41,6 +41,11 @@ function AppContent() {
   return (
     <div className="app-container">
       {/* <LiquidEther colors={['#F5EEE6', '#FFF8E3', '#F3D7CA', '#E6A4B4']} /> */}
+      <div className="ambient-background" aria-hidden="true">
+        <div className="glow-orb orb-1"></div>
+        <div className="glow-orb orb-2"></div>
+        <div className="glow-orb orb-3"></div>
+      </div>
 
       <Navbar />
       <main className="main-content">

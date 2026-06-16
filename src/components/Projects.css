@@ -27,7 +27,7 @@
   max-width: 330px;
   width: 100%;
   margin: 0 auto;
-  background: linear-gradient(rgba(255, 255, 255, 0.45), rgba(255, 255, 255, 0.45)) padding-box,
+  background: var(--glass-bg) padding-box,
               linear-gradient(135deg, var(--pastel-blue), var(--pastel-pink)) border-box;
   border: 1px solid transparent;
   backdrop-filter: var(--glass-blur);
@@ -91,7 +91,7 @@
 }
 
 .project-tag-chip {
-  background: rgba(255, 255, 255, 0.4);
+  background: var(--chip-bg);
   border: 1px solid var(--glass-border);
   color: var(--text-muted);
   font-size: 0.72rem;
@@ -114,7 +114,7 @@
 
 .project-links a {
   flex: 1;
-  background: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)) padding-box,
+  background: var(--glass-bg) padding-box,
               linear-gradient(135deg, var(--pastel-blue), var(--pastel-pink)) border-box;
   border: 1px solid transparent;
   color: var(--text-dark);
@@ -127,15 +127,16 @@
   justify-content: center;
   gap: 0.5rem;
   text-decoration: none;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.02);
+  box-shadow: var(--shadow-soft);
   transition: var(--transition-smooth);
 }
 
 .project-links a:hover {
   transform: translateY(-2px);
-  background: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)) padding-box,
+  background: var(--pastel-pink) padding-box,
               linear-gradient(135deg, var(--pastel-pink), var(--pastel-blue)) border-box;
-  box-shadow: 0 8px 16px rgba(230, 164, 180, 0.35);
+  color: #FFFFFF;
+  box-shadow: var(--shadow-hover);
 }
 
 @media (max-width: 768px) {

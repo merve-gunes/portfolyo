@@ -1,24 +1,27 @@
-import BlurText from './BlurText/BlurText';
 import './Hero.css';
 
 function Hero() {
   return (
     <section className="hero" id="home">
+      {/* CSS-based floating particles */}
+      <div className="hero-particles" aria-hidden="true">
+        <div className="particle p-1"></div>
+        <div className="particle p-2"></div>
+        <div className="particle p-3"></div>
+        <div className="particle p-4"></div>
+        <div className="particle p-5"></div>
+      </div>
+
       <div className="hero-content reveal">
         <div className="hero-text">
-          <h1>
-            Merhaba, ben <br />
-            <BlurText
-              text="Merve Safa Güneş"
-              delay={50}
-              animateBy="letters"
-              direction="top"
-              stepDuration={0.04}
-              className="hero-name-animated"
-            />
+          {/* Subtle slow-pulsing glowing sun behind heading */}
+          <div className="hero-sun-glow-background" aria-hidden="true"></div>
+          
+          <h1 className="hero-title">
+            Merve Safa Güneş
           </h1>
           <p>
-            Ostim Teknik Üniversitesi 2. sınıf öğrencisiyim. Web geliştirme ve modern yazılım mühendisliği pratikleri üzerine kendimi geliştiriyorum.Özellikle React ekosistemiyle ölçeklenebilir web uygulamaları geliştirmeye ve AI destekli geliştirme araçlarıyla modern kod mimarileri inşa etmeye odaklanıyorum.
+            React ile ölçeklenebilir web deneyimleri ve AI destekli modern mimariler üreten 2. sınıf tasarım odaklı geliştirici.
           </p>
           <div className="hero-actions">
             <a href="#projeler" className="btn-accent hero-btn">
@@ -89,6 +92,16 @@ function Hero() {
             <div className="hero-glow-blob"></div>
           </div>
         </div>
+      </div>
+
+      {/* Sleek scroll indicator */}
+      <div className="scroll-indicator" aria-hidden="true">
+        <a href="#hakkimda">
+          <span className="scroll-text">Aşağı in</span>
+          <div className="scroll-mouse">
+            <div className="scroll-wheel"></div>
+          </div>
+        </a>
       </div>
     </section>
   );

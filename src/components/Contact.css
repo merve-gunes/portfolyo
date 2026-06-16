@@ -58,14 +58,14 @@
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  border: 1px solid rgba(212, 140, 152, 0.2);
+  border: 1px solid var(--glass-border);
   transition: var(--transition-smooth);
 }
 
 .contact-social-link:hover .contact-social-icon {
   transform: scale(1.1);
-  color: #BA6B78;
-  border-color: #BA6B78;
+  color: var(--accent-hover);
+  border-color: var(--accent-hover);
 }
 
 .contact-social-info h3 {
@@ -115,7 +115,7 @@
 .form-group textarea {
   background: transparent;
   border: none;
-  border-bottom: 1px solid rgba(212, 140, 152, 0.4);
+  border-bottom: 1px solid var(--glass-border);
   border-radius: 0;
   padding: 0.8rem 0;
   outline: none;
@@ -127,7 +127,8 @@
 
 .form-group input::placeholder,
 .form-group textarea::placeholder {
-  color: #a0a5b5;
+  color: var(--text-muted);
+  opacity: 0.6;
 }
 
 .form-group input:focus,
@@ -137,7 +138,7 @@
 }
 
 .contact-submit-btn {
-  background: linear-gradient(135deg, var(--pastel-pink) 0%, var(--pastel-blue) 100%);
+  background: var(--primary-gradient);
   color: #FFFFFF;
   border: none;
   padding: 0.75rem 2rem;
@@ -152,13 +153,13 @@
   align-self: flex-start;
   margin-top: 1rem;
   cursor: pointer;
-  box-shadow: 0 4px 12px rgba(212, 140, 152, 0.2);
+  box-shadow: var(--shadow-soft);
 }
 
 .contact-submit-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(212, 140, 152, 0.3);
-  background: linear-gradient(135deg, #BA6B78 0%, var(--pastel-pink) 100%);
+  box-shadow: var(--shadow-hover);
+  background: linear-gradient(135deg, var(--accent-hover) 0%, var(--pastel-pink) 100%);
 }
 
 .contact-submit-btn svg {

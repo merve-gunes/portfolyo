@@ -1,26 +1,30 @@
 :root {
-  /* Minimalist White & Soft Pink Color Palette */
+  /* Minimalist White & Soft Pink Color Palette + Premium Sun & Light variables */
   --pastel-pink: #D48C98; /* Soft Rose Pink */
   --pastel-blue: #E8B9C1; /* Soft Pale Pink */
   
-  --bg-start: #FFFFFF; /* Pure White */
-  --bg-end: #FFFFFF; /* Pure White */
+  --bg-color: #FFFFFF;
+  --bg-gradient: linear-gradient(135deg, #FFFDFB 0%, #FFF9F6 100%);
   
-  --text-dark: #D48C98; /* For main headings & navbar links */
-  --text-muted: #4A3E3F; /* For body text (legible charcoal/rose) */
+  --text-dark: #8E5460; /* Legible dark rose for headings */
+  --text-muted: #5D4D50; /* Charcoal body text */
+  
+  --primary-gradient: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+  --accent-gold: #FFD275;
+  --accent-sun: #FFA07A;
   
   /* Contact Compatibility Variables */
   --accent-pink: var(--pastel-pink);
   --accent-peach: var(--pastel-blue);
   
   /* Glassmorphism */
-  --glass-bg: rgba(255, 255, 255, 0.9);
-  --glass-border: rgba(212, 140, 152, 0.25); /* Soft pink transparent border */
-  --glass-blur: blur(8px);
+  --glass-bg: rgba(255, 255, 255, 0.7);
+  --glass-border: rgba(212, 140, 152, 0.18); /* Soft pink transparent border */
+  --glass-blur: blur(12px);
   
   /* Shadows (Minimal Clean Soft Pink) */
-  --shadow-soft: 0 8px 24px rgba(212, 140, 152, 0.06);
-  --shadow-hover: 0 12px 32px rgba(212, 140, 152, 0.12);
+  --shadow-soft: 0 8px 24px rgba(212, 140, 152, 0.05);
+  --shadow-hover: 0 12px 32px rgba(212, 140, 152, 0.1);
   
   /* Borders and Radius */
   --radius-lg: 24px;
@@ -29,6 +33,36 @@
   
   /* Ultra-modern Bouncy Transitions */
   --transition-smooth: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  
+  /* Ambient Orbs */
+  --orb-opacity: 0.12;
+  --chip-bg: rgba(255, 255, 255, 0.4);
+  --accent-hover: #BA6B78;
+  
+  /* Theme Transition settings */
+  --theme-transition: background-color 0.5s ease, background-image 0.5s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+html.dark {
+  /* Dark Mode (Sun & Light Premium - Breathable Midnight) */
+  --bg-color: #0b0f19;
+  --bg-gradient: radial-gradient(circle at 50% 25%, rgba(255, 210, 117, 0.04) 0%, rgba(212, 140, 152, 0.03) 40%, #0b0f19 100%);
+  
+  --text-dark: #FFD275; /* Premium gold headings */
+  --text-muted: #E5E0DF; /* Off-white body text */
+  
+  --pastel-pink: #ECA3B0;
+  --pastel-blue: #F0C4CC;
+  
+  --glass-bg: rgba(15, 23, 42, 0.65);
+  --glass-border: rgba(255, 210, 117, 0.12);
+  
+  --shadow-soft: 0 8px 30px rgba(0, 0, 0, 0.45);
+  --shadow-hover: 0 12px 40px rgba(255, 210, 117, 0.06);
+  
+  --orb-opacity: 0.15;
+  --chip-bg: rgba(255, 255, 255, 0.08);
+  --accent-hover: #FFFFFF;
 }
 
 * {
@@ -39,16 +73,24 @@
 
 html {
   scroll-behavior: smooth;
+  transition: var(--theme-transition);
 }
 
 body {
   font-family: 'Plus Jakarta Sans', sans-serif;
-  background: #FFFFFF;
+  background: var(--bg-color);
+  background-image: var(--bg-gradient);
   color: var(--text-muted);
   min-height: 100vh;
   overflow-x: hidden;
   line-height: 1.6;
   font-weight: 500;
+  transition: var(--theme-transition);
+}
+
+/* Global transitions for text elements to avoid hard flashes during theme changes */
+h1, h2, h3, h4, h5, h6, p, a, button, input, textarea, span, img, svg {
+  transition: var(--theme-transition);
 }
 
 p {
@@ -65,7 +107,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Glassmorphism Card Style Utility with Gradient Border */
 .glass-panel {
-  background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)) padding-box,
+  background: var(--glass-bg) padding-box,
               linear-gradient(135deg, var(--pastel-blue), var(--pastel-pink)) border-box;
   border: 1px solid transparent;
   backdrop-filter: var(--glass-blur);
@@ -82,9 +124,9 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Interactive Element Styles */
 .btn-accent {
-  background: #FFFFFF;
-  color: #D48C98;
-  border: 1px solid #D48C98;
+  background: var(--bg-color);
+  color: var(--pastel-pink);
+  border: 1px solid var(--pastel-pink);
   font-weight: 600;
   cursor: pointer;
   transition: var(--transition-smooth);
@@ -97,13 +139,77 @@ h1, h2, h3, h4, h5, h6 {
 
 .btn-accent:hover {
   transform: translateY(-3px);
-  background: #D48C98;
+  background: var(--pastel-pink);
   color: #FFFFFF;
   box-shadow: 0 8px 20px rgba(212, 140, 152, 0.25);
 }
 
 .btn-accent:active {
   transform: translateY(-1px);
+}
+
+/* Ambient Lighting Background Layer */
+.ambient-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+  background: transparent;
+}
+
+.glow-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(120px);
+  opacity: var(--orb-opacity);
+  transition: var(--theme-transition), opacity 0.5s ease;
+  pointer-events: none;
+}
+
+.orb-1 {
+  top: -10%;
+  right: -5%;
+  width: 50vw;
+  height: 50vw;
+  background: radial-gradient(circle, var(--accent-gold) 0%, var(--pastel-pink) 70%, transparent 100%);
+  animation: floatOrb1 25s ease-in-out infinite alternate;
+}
+
+.orb-2 {
+  bottom: -15%;
+  left: -10%;
+  width: 60vw;
+  height: 60vw;
+  background: radial-gradient(circle, var(--accent-sun) 0%, var(--pastel-blue) 75%, transparent 100%);
+  animation: floatOrb2 30s ease-in-out infinite alternate;
+}
+
+.orb-3 {
+  top: 40%;
+  left: 30%;
+  width: 35vw;
+  height: 35vw;
+  background: radial-gradient(circle, var(--pastel-pink) 0%, var(--accent-gold) 80%, transparent 100%);
+  animation: floatOrb3 20s ease-in-out infinite alternate;
+}
+
+@keyframes floatOrb1 {
+  0% { transform: translate(0, 0) scale(1); }
+  100% { transform: translate(-8%, 10%) scale(1.15); }
+}
+
+@keyframes floatOrb2 {
+  0% { transform: translate(0, 0) scale(1); }
+  100% { transform: translate(10%, -5%) scale(0.9); }
+}
+
+@keyframes floatOrb3 {
+  0% { transform: translate(0, 0) scale(1); }
+  100% { transform: translate(-5%, -10%) scale(1.1); }
 }
 
 /* Section styling */
