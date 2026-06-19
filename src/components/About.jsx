@@ -5,7 +5,6 @@ function About() {
   return (
     <section className="about" id="hakkimda">
       <div className="about-container reveal reveal-delay-1">
-        <h2 className="section-title">Hakkımda</h2>
         <div className="about-content-wrapper">
           <div className="about-intro">
             <h3>Öğrenme Yolculuğunda Bir Yazılım Mühendisi Adayı</h3>
